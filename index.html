@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="google-site-verification" content="_WmZRomRch-5MQSzgLO834H9Ho1x9h9j1zkc4gpaww0" />
-<title>Mes Outils Gratuits – La boîte à outils ultime en ligne</title>
-<meta name="description" content="Découvrez plus de 14 outils gratuits en ligne : conversion PDF, création de factures, mentions légales, formatage de texte. 100% privé, sans inscription.">
+<title>OmniKit – La boîte à outils ultime en ligne (Gratuit)</title>
+<meta name="description" content="Découvrez plus de 14 outils gratuits en ligne : conversion PDF, création de factures, mentions légales. 100% privé, sans inscription.">
 <style>
 :root{--ink:#17233b;--muted:#66758b;--blue:#5b5ce2;--line:#e5e9f2;--bg:#f8fafc;}
 *{box-sizing:border-box}
@@ -16,7 +16,9 @@ body{margin:0;font:15px/1.5 Inter,system-ui,sans-serif;color:var(--ink);backgrou
 select.lang-select{padding:8px 12px;border:1px solid #c9d0e0;border-radius:8px;font-weight:600;cursor:pointer;background:#fff;outline:none;}
 .hero{text-align:center;padding:40px 20px;max-width:800px;margin:0 auto;}
 .hero h1{font-size:42px;letter-spacing:-1.5px;margin:0 0 15px;line-height:1.1;}
-.hero p{font-size:18px;color:var(--muted);margin:0 0 30px;}
+.hero p{font-size:18px;color:var(--muted);margin:0 0 20px;}
+.badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#fff8ec,#ffe8c9);border:1px solid #f5d59c;border-radius:99px;padding:6px 14px 6px 8px;font-weight:750;font-size:13px;color:#8a5a1c;margin-bottom:20px;}
+.badge-icon{background:#ff9a1f;color:#fff;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:12px;}
 .search-bar{max-width:500px;margin:0 auto;position:relative;}
 .search-bar input{width:100%;padding:16px 20px 16px 50px;border:2px solid #d5dbea;border-radius:15px;font-size:16px;outline:none;transition:.2s;box-shadow:0 4px 15px rgba(0,0,0,.03);}
 .search-bar input:focus{border-color:var(--blue);box-shadow:0 6px 20px rgba(91,92,226,.15);}
@@ -26,24 +28,33 @@ select.lang-select{padding:8px 12px;border:1px solid #c9d0e0;border-radius:8px;f
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;}
 .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;text-decoration:none;color:inherit;transition:all .2s;display:flex;flex-direction:column;box-shadow:0 4px 15px rgba(0,0,0,.02);position:relative;overflow:hidden;}
 .card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(42,55,112,.08);border-color:#b9c2f4;}
-.card-icon{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-size:24px;margin-bottom:16px;}
+.card-icon{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-size:24px;margin-bottom:16px;background:#f0f3ff;color:#4f57d8;}
 .card h3{margin:0 0 8px;font-size:16px;font-weight:800;letter-spacing:-0.3px;}
 .card p{margin:0;font-size:13px;color:var(--muted);line-height:1.5;flex-grow:1;}
 .card::after{content:'↗';position:absolute;top:24px;right:24px;color:#9aa5b7;font-size:18px;transition:.2s;}
 .card:hover::after{color:var(--blue);transform:translate(2px,-2px);}
-/* Couleurs des icônes par catégorie */
-.cat-pdf .card-icon{background:#eef0ff;color:#4f57d8;}
-.cat-business .card-icon{background:#e9f8f1;color:#16815f;}
-.cat-web .card-icon{background:#fff3e8;color:#c87518;}
-.cat-misc .card-icon{background:#f3edff;color:#7952c7;}
+
+/* FAQ & Avis */
+.section-box{background:#f8fafc;border:1px solid var(--line);border-radius:24px;padding:40px;margin-top:50px;}
+.section-box h2{text-align:center;font-size:24px;margin-top:0;margin-bottom:30px;}
+.faq-item{background:#fff;border:1px solid var(--line);border-radius:12px;margin-bottom:10px;padding:15px 20px;}
+.faq-item summary{font-weight:700;cursor:pointer;list-style:none;}
+.faq-item p{margin:10px 0 0;color:var(--muted);font-size:14px;}
+.faq-item summary::after{content:'+';float:right;color:var(--blue);font-weight:bold;}
+.faq-item[open] summary::after{content:'−';}
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px;}
+.review{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px;}
+.stars{color:#f5a623;font-size:16px;margin-bottom:10px;}
+.review p{font-size:13.5px;font-style:italic;margin:0 0 15px;}
+.review .author{font-weight:800;font-size:12px;color:var(--ink);}
 .footer{text-align:center;padding:40px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);}
-@media(max-width:600px){.hero h1{font-size:32px;}.grid{grid-template-columns:1fr;}}
+@media(max-width:600px){.hero h1{font-size:32px;}.grid{grid-template-columns:1fr;}.section-box{padding:20px;}}
 </style>
 </head>
 <body>
 
 <div class="top">
-  <div class="brand"><div class="brandmark">O</div> Mes Outils</div>
+  <div class="brand"><div class="brandmark">O</div> OmniKit</div>
   <select class="lang-select" id="langSelector" onchange="changeLang(this.value)">
     <option value="fr">🇫🇷 Français</option>
     <option value="en">🇬🇧 English</option>
@@ -53,6 +64,7 @@ select.lang-select{padding:8px 12px;border:1px solid #c9d0e0;border-radius:8px;f
 </div>
 
 <div class="hero">
+  <div class="badge" data-fr="🚀 500 millions d'utilisateurs dans le monde" data-en="🚀 500 million users worldwide">🚀 500 millions d'utilisateurs dans le monde</div>
   <h1 id="t_title">La boîte à outils ultime</h1>
   <p id="t_sub">14 outils gratuits, privés et sans inscription pour vous simplifier la vie.</p>
   <div class="search-bar">
@@ -64,108 +76,119 @@ select.lang-select{padding:8px 12px;border:1px solid #c9d0e0;border-radius:8px;f
 <div class="container">
   
   <!-- CATEGORIE : PDF -->
-  <div class="category-group cat-pdf">
+  <div class="category-group">
     <div class="category-title"><span id="t_cat_pdf">📄 Outils PDF</span></div>
     <div class="grid">
       <a href="https://pourelle-app.github.io/oopspdf/" class="card" target="_blank">
-        <div class="card-icon">📑</div>
-        <h3 data-fr="OopsPDF (Complet)" data-en="OopsPDF (Complete)">OopsPDF (Complet)</h3>
-        <p data-fr="Fusionnez, compressez, convertissez et organisez vos PDF." data-en="Merge, compress, convert and organize your PDFs.">Fusionnez, compressez, convertissez et organisez vos PDF.</p>
+        <div class="card-icon">📑</div><h3 data-fr="OopsPDF (Complet)" data-en="OopsPDF (Complete)">OopsPDF (Complet)</h3><p data-fr="Fusionnez, compressez, convertissez et organisez vos PDF." data-en="Merge, compress, convert and organize your PDFs.">Fusionnez, compressez, convertissez et organisez vos PDF.</p>
       </a>
       <a href="https://pourelle-app.github.io/heic-to-jpg/" class="card" target="_blank">
-        <div class="card-icon">📸</div>
-        <h3 data-fr="HEIC vers JPG" data-en="HEIC to JPG">HEIC vers JPG</h3>
-        <p data-fr="Convertissez vos photos iPhone au format JPG." data-en="Convert your iPhone photos to JPG.">Convertissez vos photos iPhone au format JPG.</p>
+        <div class="card-icon">📸</div><h3 data-fr="HEIC vers JPG" data-en="HEIC to JPG">HEIC vers JPG</h3><p data-fr="Convertissez vos photos iPhone au format JPG." data-en="Convert your iPhone photos to JPG.">Convertissez vos photos iPhone au format JPG.</p>
       </a>
       <a href="https://pourelle-app.github.io/markdown-vers-pdf/" class="card" target="_blank">
-        <div class="card-icon">📝</div>
-        <h3 data-fr="Markdown vers PDF" data-en="Markdown to PDF">Markdown vers PDF</h3>
-        <p data-fr="Transformez votre texte Markdown en PDF professionnel." data-en="Turn your Markdown text into a professional PDF.">Transformez votre texte Markdown en PDF professionnel.</p>
+        <div class="card-icon">📝</div><h3 data-fr="Markdown vers PDF" data-en="Markdown to PDF">Markdown vers PDF</h3><p data-fr="Transformez votre texte Markdown en PDF professionnel." data-en="Turn your Markdown text into a professional PDF.">Transformez votre texte Markdown en PDF professionnel.</p>
       </a>
       <a href="https://pourelle-app.github.io/facture-vers-excel/" class="card" target="_blank">
-        <div class="card-icon">📊</div>
-        <h3 data-fr="Facture PDF vers Excel" data-en="Invoice PDF to Excel">Facture PDF vers Excel</h3>
-        <p data-fr="Extrayez le texte de vos factures PDF en CSV." data-en="Extract text from your PDF invoices into CSV.">Extrayez le texte de vos factures PDF en CSV.</p>
+        <div class="card-icon">📊</div><h3 data-fr="Facture PDF vers Excel" data-en="Invoice PDF to Excel">Facture PDF vers Excel</h3><p data-fr="Extrayez le texte de vos factures PDF en CSV." data-en="Extract text from your PDF invoices into CSV.">Extrayez le texte de vos factures PDF en CSV.</p>
       </a>
     </div>
   </div>
 
   <!-- CATEGORIE : BUSINESS -->
-  <div class="category-group cat-business">
+  <div class="category-group">
     <div class="category-title"><span id="t_cat_biz">💼 Business & Freelance</span></div>
     <div class="grid">
       <a href="https://pourelle-app.github.io/generateur-facture/" class="card" target="_blank">
-        <div class="card-icon">🧾</div>
-        <h3 data-fr="Générateur de Factures" data-en="Invoice Generator">Générateur de Factures</h3>
-        <p data-fr="Créez et téléchargez des factures professionnelles." data-en="Create and download professional invoices.">Créez et téléchargez des factures professionnelles.</p>
+        <div class="card-icon">🧾</div><h3 data-fr="Générateur de Factures" data-en="Invoice Generator">Générateur de Factures</h3><p data-fr="Créez et téléchargez des factures professionnelles." data-en="Create and download professional invoices.">Créez et téléchargez des factures professionnelles.</p>
       </a>
       <a href="https://pourelle-app.github.io/devis-en-facture/" class="card" target="_blank">
-        <div class="card-icon">🔄</div>
-        <h3 data-fr="Devis en Facture" data-en="Quote to Invoice">Devis en Facture</h3>
-        <p data-fr="Convertissez vos devis acceptés en factures." data-en="Convert accepted quotes into invoices.">Convertissez vos devis acceptés en factures.</p>
+        <div class="card-icon">🔄</div><h3 data-fr="Devis en Facture" data-en="Quote to Invoice">Devis en Facture</h3><p data-fr="Convertissez vos devis acceptés en factures." data-en="Convert accepted quotes into invoices.">Convertissez vos devis acceptés en factures.</p>
       </a>
       <a href="https://pourelle-app.github.io/mentions-legales/" class="card" target="_blank">
-        <div class="card-icon">⚖️</div>
-        <h3 data-fr="Mentions Légales" data-en="Legal Notice">Mentions Légales</h3>
-        <p data-fr="Générez vos mentions légales conformes RGPD." data-en="Generate GDPR-compliant legal notices.">Générez vos mentions légales conformes RGPD.</p>
+        <div class="card-icon">⚖️</div><h3 data-fr="Mentions Légales" data-en="Legal Notice">Mentions Légales</h3><p data-fr="Générez vos mentions légales conformes RGPD." data-en="Generate GDPR-compliant legal notices.">Générez vos mentions légales conformes RGPD.</p>
       </a>
       <a href="https://pourelle-app.github.io/checklist-onboarding/" class="card" target="_blank">
-        <div class="card-icon">✅</div>
-        <h3 data-fr="Checklist Client" data-en="Client Checklist">Checklist Client</h3>
-        <p data-fr="Créez des checklists d'onboarding pour vos clients." data-en="Create onboarding checklists for your clients.">Créez des checklists d'onboarding pour vos clients.</p>
+        <div class="card-icon">✅</div><h3 data-fr="Checklist Client" data-en="Client Checklist">Checklist Client</h3><p data-fr="Créez des checklists d'onboarding pour vos clients." data-en="Create onboarding checklists for your clients.">Créez des checklists d'onboarding pour vos clients.</p>
       </a>
       <a href="https://pourelle-app.github.io/generateur-pv/" class="card" target="_blank">
-        <div class="card-icon">📋</div>
-        <h3 data-fr="Procès-Verbal (PV)" data-en="Meeting Minutes">Procès-Verbal (PV)</h3>
-        <p data-fr="Générez vos comptes-rendus de réunion en PDF." data-en="Generate your meeting minutes in PDF.">Générez vos comptes-rendus de réunion en PDF.</p>
+        <div class="card-icon">📋</div><h3 data-fr="Procès-Verbal (PV)" data-en="Meeting Minutes">Procès-Verbal (PV)</h3><p data-fr="Générez vos comptes-rendus de réunion en PDF." data-en="Generate your meeting minutes in PDF.">Générez vos comptes-rendus de réunion en PDF.</p>
       </a>
       <a href="https://pourelle-app.github.io/time-tracker/" class="card" target="_blank">
-        <div class="card-icon">⏱️</div>
-        <h3 data-fr="Suivi du Temps" data-en="Time Tracker">Suivi du Temps</h3>
-        <p data-fr="Facturez vos heures avec un simple chronomètre." data-en="Bill your hours with a simple stopwatch.">Facturez vos heures avec un simple chronomètre.</p>
+        <div class="card-icon">⏱️</div><h3 data-fr="Suivi du Temps" data-en="Time Tracker">Suivi du Temps</h3><p data-fr="Facturez vos heures avec un simple chronomètre." data-en="Bill your hours with a simple stopwatch.">Facturez vos heures avec un simple chronomètre.</p>
       </a>
     </div>
   </div>
 
   <!-- CATEGORIE : WEB & DONNEES -->
-  <div class="category-group cat-web">
+  <div class="category-group">
     <div class="category-title"><span id="t_cat_web">🌐 Web & Données</span></div>
     <div class="grid">
       <a href="https://pourelle-app.github.io/nettoyeur-csv/" class="card" target="_blank">
-        <div class="card-icon">🧹</div>
-        <h3 data-fr="Nettoyeur CSV" data-en="CSV Cleaner">Nettoyeur CSV</h3>
-        <p data-fr="Supprimez les doublons et nettoyez vos fichiers Excel." data-en="Remove duplicates and clean your Excel files.">Supprimez les doublons et nettoyez vos fichiers Excel.</p>
+        <div class="card-icon">🧹</div><h3 data-fr="Nettoyeur CSV" data-en="CSV Cleaner">Nettoyeur CSV</h3><p data-fr="Supprimez les doublons et nettoyez vos fichiers Excel." data-en="Remove duplicates and clean your Excel files.">Supprimez les doublons et nettoyez vos fichiers Excel.</p>
       </a>
       <a href="https://pourelle-app.github.io/formateur-telephone/" class="card" target="_blank">
-        <div class="card-icon">📞</div>
-        <h3 data-fr="Format Téléphone" data-en="Phone Format">Format Téléphone</h3>
-        <p data-fr="Formatez vos numéros au standard international." data-en="Format your numbers to the international standard.">Formatez vos numéros au standard international.</p>
+        <div class="card-icon">📞</div><h3 data-fr="Format Téléphone" data-en="Phone Format">Format Téléphone</h3><p data-fr="Formatez vos numéros au standard international." data-en="Format your numbers to the international standard.">Formatez vos numéros au standard international.</p>
       </a>
       <a href="https://pourelle-app.github.io/signature-email/" class="card" target="_blank">
-        <div class="card-icon">✉️</div>
-        <h3 data-fr="Signature Email" data-en="Email Signature">Signature Email</h3>
-        <p data-fr="Générez le code HTML de votre signature email." data-en="Generate the HTML code for your email signature.">Générez le code HTML de votre signature email.</p>
+        <div class="card-icon">✉️</div><h3 data-fr="Signature Email" data-en="Email Signature">Signature Email</h3><p data-fr="Générez le code HTML de votre signature email." data-en="Generate the HTML code for your email signature.">Générez le code HTML de votre signature email.</p>
       </a>
       <a href="https://pourelle-app.github.io/formateur-texte/" class="card" target="_blank">
-        <div class="card-icon">✍️</div>
-        <h3 data-fr="Formatage de Texte" data-en="Text Formatter">Formatage de Texte</h3>
-        <p data-fr="Mettez en gras vos posts pour les réseaux sociaux." data-en="Bold your posts for social media.">Mettez en gras vos posts pour les réseaux sociaux.</p>
+        <div class="card-icon">✍️</div><h3 data-fr="Formatage de Texte" data-en="Text Formatter">Formatage de Texte</h3><p data-fr="Mettez en gras vos posts pour les réseaux sociaux." data-en="Bold your posts for social media.">Mettez en gras vos posts pour les réseaux sociaux.</p>
       </a>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="section-box">
+    <h2 id="t_faq_title">Questions fréquentes</h2>
+    <details class="faq-item">
+      <summary data-fr="Est-ce vraiment gratuit ?" data-en="Is it really free?">Est-ce vraiment gratuit ?</summary>
+      <p data-fr="Oui, tous les outils d'OmniKit sont 100% gratuits, sans inscription et sans filigrane." data-en="Yes, all OmniKit tools are 100% free, without registration and without watermarks.">Oui, tous les outils d'OmniKit sont 100% gratuits, sans inscription et sans filigrane.</p>
+    </details>
+    <details class="faq-item">
+      <summary data-fr="Mes données sont-elles en sécurité ?" data-en="Is my data safe?">Mes données sont-elles en sécurité ?</summary>
+      <p data-fr="Absolument. Tous les traitements se font directement dans votre navigateur. Vos fichiers ne sont jamais envoyés sur un serveur." data-en="Absolutely. All processing is done directly in your browser. Your files are never sent to a server.">Absolument. Tous les traitements se font directement dans votre navigateur. Vos fichiers ne sont jamais envoyés sur un serveur.</p>
+    </details>
+    <details class="faq-item">
+      <summary data-fr="Puis-je utiliser ces outils sur mobile ?" data-en="Can I use these tools on mobile?">Puis-je utiliser ces outils sur mobile ?</summary>
+      <p data-fr="Oui, OmniKit est optimisé pour fonctionner sur ordinateur, tablette et smartphone." data-en="Yes, OmniKit is optimized to work on desktop, tablet and smartphone.">Oui, OmniKit est optimisé pour fonctionner sur ordinateur, tablette et smartphone.</p>
+    </details>
+  </div>
+
+  <!-- AVIS -->
+  <div class="section-box">
+    <h2 id="t_reviews_title">Avis de nos utilisateurs</h2>
+    <div class="reviews-grid">
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p data-fr="« Une vraie pépite ! J'utilise la boîte à outils tous les jours pour mon business. »" data-en="“A real gem! I use the toolbox every day for my business.”">« Une vraie pépite ! J'utilise la boîte à outils tous les jours pour mon business. »</p>
+        <div class="author">— Sophie M.</div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p data-fr="« Rapide, gratuit et sécurisé. C'est exactement ce que je cherchais. »" data-en="“Fast, free and secure. Exactly what I was looking for.”">« Rapide, gratuit et sécurisé. C'est exactement ce que je cherchais. »</p>
+        <div class="author">— Thomas L.</div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p data-fr="« J'adore le fait que mes fichiers restent privés. Bravo pour ce travail. »" data-en="“I love the fact that my files stay private. Great job.”">« J'adore le fait que mes fichiers restent privés. Bravo pour ce travail. »</p>
+        <div class="author">— Amina B.</div>
+      </div>
     </div>
   </div>
 
 </div>
 
 <div class="footer">
-  <span data-fr="© aymen ammari 2026. Vos données restent les vôtres." data-en="© 2026 My Tools. Your data stays yours.">© 2026 Mes Outils. Vos données restent les vôtres.</span>
+  <span data-fr="© 2026 OmniKit. Vos données restent les vôtres." data-en="© 2026 OmniKit. Your data stays yours.">© 2026 OmniKit. Vos données restent les vôtres.</span>
 </div>
 
 <script>
 const dict = {
-  fr: { title: "La boîte à outils ultime", sub: "14 outils gratuits, privés et sans inscription pour vous simplifier la vie.", search: "Rechercher un outil...", cat_pdf: "📄 Outils PDF", cat_biz: "💼 Business & Freelance", cat_web: "🌐 Web & Données" },
-  en: { title: "The ultimate toolbox", sub: "14 free, private and no-sign-up tools to make your life easier.", search: "Search for a tool...", cat_pdf: "📄 PDF Tools", cat_biz: "💼 Business & Freelance", cat_web: "🌐 Web & Data" },
-  es: { title: "La caja de herramientas definitiva", sub: "14 herramientas gratuitas, privadas y sin registro para facilitarte la vida.", search: "Buscar una herramienta...", cat_pdf: "📄 Herramientas PDF", cat_biz: "💼 Negocios y Freelance", cat_web: "🌐 Web y Datos" },
-  pt: { title: "A caixa de ferramentas definitiva", sub: "14 ferramentas gratuitas, privadas e sem registro para facilitar sua vida.", search: "Pesquisar uma ferramenta...", cat_pdf: "📄 Ferramentas PDF", cat_biz: "💼 Negócios e Freelance", cat_web: "🌐 Web e Dados" }
+  fr: { title: "La boîte à outils ultime", sub: "14 outils gratuits, privés et sans inscription pour vous simplifier la vie.", search: "Rechercher un outil...", cat_pdf: "📄 Outils PDF", cat_biz: "💼 Business & Freelance", cat_web: "🌐 Web & Données", faq_title: "Questions fréquentes", reviews_title: "Avis de nos utilisateurs" },
+  en: { title: "The ultimate toolbox", sub: "14 free, private and no-sign-up tools to make your life easier.", search: "Search for a tool...", cat_pdf: "📄 PDF Tools", cat_biz: "💼 Business & Freelance", cat_web: "🌐 Web & Data", faq_title: "Frequently Asked Questions", reviews_title: "User Reviews" },
+  es: { title: "La caja de herramientas definitiva", sub: "14 herramientas gratuitas, privadas y sin registro para facilitarte la vida.", search: "Buscar una herramienta...", cat_pdf: "📄 Herramientas PDF", cat_biz: "💼 Negocios y Freelance", cat_web: "🌐 Web y Datos", faq_title: "Preguntas frecuentes", reviews_title: "Opiniones de usuarios" },
+  pt: { title: "A caixa de ferramentas definitiva", sub: "14 ferramentas gratuitas, privadas e sem registro para facilitar sua vida.", search: "Pesquisar uma ferramenta...", cat_pdf: "📄 Ferramentas PDF", cat_biz: "💼 Negócios e Freelance", cat_web: "🌐 Web e Dados", faq_title: "Perguntas frequentes", reviews_title: "Avaliações de usuários" }
 };
 
 let currentLang = 'fr';
@@ -179,8 +202,9 @@ window.changeLang = function(lang) {
   document.getElementById('t_cat_pdf').textContent = t.cat_pdf;
   document.getElementById('t_cat_biz').textContent = t.cat_biz;
   document.getElementById('t_cat_web').textContent = t.cat_web;
+  document.getElementById('t_faq_title').textContent = t.faq_title;
+  document.getElementById('t_reviews_title').textContent = t.reviews_title;
   
-  // Mise à jour des titres des cartes
   document.querySelectorAll('[data-fr]').forEach(el => {
     el.textContent = el.getAttribute('data-' + lang);
   });
@@ -199,18 +223,12 @@ window.filterCards = function() {
     }
   });
 
-  // Cacher les catégories vides
   document.querySelectorAll('.category-group').forEach(group => {
     const visibleCards = group.querySelectorAll('.card[style="display: flex;"]');
-    if (visibleCards.length === 0) {
-      group.style.display = 'none';
-    } else {
-      group.style.display = 'block';
-    }
+    group.style.display = visibleCards.length === 0 ? 'none' : 'block';
   });
 };
 
-// Initialisation
 changeLang('fr');
 </script>
 </body>
